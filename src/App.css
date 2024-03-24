@@ -1,0 +1,124 @@
+.App {
+
+  
+    text-align: center;
+   background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* background: url(${process.env.PUBLIC_URL}/videos/video_2.mp4) no-repeat center center/cover; */
+  pointer-events: none;
+}
+
+/* body {
+  background-image: url('/images/pic1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 60px;
+  color: white;
+  max-height: 600px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  position: fixed;
+
+
+  
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1em;
+  color: #c3d0ea;
+  align-items: center;
+  background: linear-gradient(to right, #83f12e, #00ff73);
+  color: white; /* Change the text color to be visible on the gradient */
+  border: none; /* Add the missing semicolon here */
+  cursor: pointer; /* Change the cursor when hovering over the button */
+  /* Add other styles as needed */
+}
+
+.card h2 {
+  color: #000000;
+}
+
+.card p {
+  color: #000000;
+}
+
+
+
+.history-item {
+  background-color: #000000;
+  border: 1px solid #ffffff; /* Change the color as needed */
+ 
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.App-link {
+  color: #000000;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
