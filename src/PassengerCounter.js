@@ -38,7 +38,7 @@ class PassengerCounter extends Component {
   render() {
     return (
       <div className="content">
-        <video autoPlay loop muted style={{
+        <iframe title="background-video" src="https://www.youtube.com/embed/gLUrGSAMBLw?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" style={{
           position: "fixed",
           width: "100%",
           left: "50%",
@@ -47,19 +47,17 @@ class PassengerCounter extends Component {
           objectFit: "cover",
           transform: "translate(-50%, -50%)",
           zIndex: "-1"
-        }}>
-          <source src={`${process.env.PUBLIC_URL}/videos/video1.mp4`} type="video/mp4" />
-        </video>
+        }} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
         <div className="card">
           <h2>Passenger Counter</h2>
           <p>Passenger count: {this.state.count}</p>
           <p>Current time: {this.state.time}</p>
           <div>
-  <button onClick={this.incrementCount}>Add Passenger</button>
-</div>
-<div>
-  <Link to="history" smooth={true} duration={500}>Scroll to History</Link>
-</div>
+            <button onClick={this.incrementCount}>Add Passenger</button>
+          </div>
+          <div>
+            <Link to="history" smooth={true} duration={500}>Scroll to History</Link>
+          </div>
           <Element name="history">
             <div>
               <h3>History:</h3>
