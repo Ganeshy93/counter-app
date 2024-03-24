@@ -34,11 +34,10 @@ class PassengerCounter extends Component {
       history: [...prevState.history, {count: prevState.count + 1, time: new Date().toLocaleTimeString()}]
     }));
   }
-
   render() {
     return (
       <div className="content">
-        <iframe title="background-video" src="https://www.youtube.com/embed/gLUrGSAMBLw?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" style={{
+        <iframe title="background-video" src="https://www.youtube.com/embed/gLUrGSAMBLw?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&modestbranding=1" style={{
           position: "fixed",
           width: "100%",
           left: "50%",
@@ -48,7 +47,7 @@ class PassengerCounter extends Component {
           transform: "translate(-50%, -50%)",
           zIndex: "-1"
         }} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-        <div className="card">
+        <div className="card no-scrollbar" style={{ maxHeight: '500px', overflow: 'auto' }}>
           <h2>Passenger Counter</h2>
           <p>Passenger count: {this.state.count}</p>
           <p>Current time: {this.state.time}</p>
@@ -72,6 +71,7 @@ class PassengerCounter extends Component {
       </div>
     );
   }
+  
 }
 
 export default PassengerCounter;
